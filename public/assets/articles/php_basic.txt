@@ -5,13 +5,19 @@ php代码写在这个里面: <?php   ?>
 变量: 用$开头
 函数: function xx() {}
 
-while循环: while() {}
-do..while循环: do {} while {}
-for循环: for() {}
-foreach: foreach ($array as $value){} / foreach ($array as $key => $value){}
+while() {}
+do {} while {}
+for(; ;) {}
+foreach ($array as $value){}
+foreach ($array as $key => $value){}
+if (){}
+if (){}  else {}
+if (){}  elseif {}  else {}
+switch { case xxx: break; default: }
 
 函数内访问全局变量: global关键字
 局部静态变量: static关键字
+
 
 
 【【常用】】
@@ -63,21 +69,7 @@ Resource (资源): 资源类型
 作用：常用于在 PHP 中嵌入大段的 HTML 或其他文本时。用EOF包裹字符串比使用引号包裹字符串更方便。
 
 
-【【循环】】
-for ($i=1; $i<=5; $i++){}
 
-foreach ($array as $value) {}
-foreach ($array as $key => $value){}
-
-while (){}
-do{}while ();
-
-【【条件】】
-if (){}
-if (){}  else {}
-if (){}  elseif {}  else {}
-
-switch { case xxx: break; default: }
 
 
 
