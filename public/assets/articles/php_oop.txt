@@ -1,0 +1,145 @@
+参考文章:https://www.runoob.com/php/php-oop.html
+
+【类与继承】
+<?php
+
+// 接口
+interface Organism {
+  public function breathe();
+  public function eat($food);
+}
+
+class Animal {
+
+  //关键字: public、protected、private
+  //用 var 定义也会被视为public
+
+  public $name;
+  public $sound;
+
+  // 常量 （定义常量时不用 $ 号）
+  const constant = '常量值';
+
+  // 构造函数
+  public function __construct($name, $sound) {
+    $this->name = $name;
+    $this-> sound = $sound;
+  }
+
+  // 成员方法
+  public function eat() {
+    echo $this->name . " is eating.";
+  }
+  public function makeSound() {
+    echo "The animal says: " . $this-> sound ;
+  }
+}
+
+// 继承
+// PHP 中一个类只能继承一个父类（单继承）
+class Cat extends Animal {
+  public $color;
+
+  // 方法重写
+  public function __construct($name, $sound, $color) {
+    //重写时如果要调用父类的方法,可以用parent::xxx()
+    parent::__construct($name, $sound); 
+    $this-> color = $color;
+  }
+  public function makeSound() {
+    echo "The cat says: " . $this-> sound ;
+  }
+
+  // 子类自己的方法
+  public function catchFish() {
+    echo "The cat catching fishes" ;
+  }  
+}
+
+// 实例化
+$cat_a = new Cat("Cat_a", "Meow!","Orange");
+
+// 调用成员方法
+$cat_a->bark();
+$cat_a->eat(); 
+$cat_a-> catchFish(); 
+
+?>
+
+
+
+
+【接口与抽象类】
+
+<?php
+
+// 接口 (类中必须实现接口中定义的所有方法)
+// 一个类可实现多个接口(多重实现)
+interface Organism {
+  public function breathe();
+  public function eat($food);
+}
+
+// 抽象类
+abstract class Animal implements Organism {
+  protected $name;
+  protected $sound;
+
+  public function __construct($name, $sound) {
+    $this->name = $name;
+    $this-> sound = $sound;
+  }
+
+  public function getName() {
+    return $this->name;
+  }
+
+  public function getSound() {
+    return $this->sound;
+  }
+
+  // 实现接口中的方法
+  public function breathe() {
+    echo "{$this->name} is breathing.\n";
+  }
+
+  // 抽象方法 (子类必须定义父类中的所有抽象方法)
+  abstract public function move();
+
+  // 实现接口中的方法
+  public function eat($food) {
+    echo "{$this->name} is eating {$food}.\n";
+  }
+}
+
+// 继承自 Animal 的类
+class Cat extends Animal {
+  public function __construct($name, $sound) {
+    parent::__construct($name, $sound);
+  }
+
+  // 实现抽象方法
+  public function move() {
+    echo "{$this->name} is running.\n";
+  }
+
+  public function meow() {
+    echo "{$this->name} is meowing.\n";
+  }
+}
+
+$cat_b = new Cat('Cat_b', "Hahahaha!");
+$cat_b->breathe(); 
+$cat_b->eat('fish'); 
+$cat_b->move();  
+$cat_b->meow(); 
+
+
+
+
+
+
+
+
+
+
