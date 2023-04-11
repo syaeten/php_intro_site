@@ -12,7 +12,7 @@ foreach ($articles as $article):
 ?>
 
 <div>
-  <h2>PHP基础语法</h2>
+  <h2>PHP 基础语法 (Basic syntax of PHP)</h2>
   <h2><?=$article['title']?></h2>
   <h2><?=$article['content']?></h2>
 </div>

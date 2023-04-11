@@ -12,7 +12,7 @@ foreach ($articles as $article):
 ?>
 
 <div>
-  <h2>jQuery基础语法</h2>
+  <h2>jQuery 基础语法 (Basic syntax of jQuery)</h2>
   <h2><?=$article->title?></h2>
   <p><?=$article->content?></p>
 </div>

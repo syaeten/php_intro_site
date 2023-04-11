@@ -8,7 +8,7 @@ function get_articles(){
   $user = 'root';
   $password = '1234';
 
-  // 创建PDO连接
+  // 创建PDO连接  Create PDO connection
   $dsn = "mysql:host=$host;dbname=$dbname;charset=utf8mb4";
   $options = [
       PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -21,7 +21,7 @@ function get_articles(){
       throw new PDOException($e->getMessage(), (int)$e->getCode());
   }
 
-  // 执行查询语句
+  // 执行查询语句  Execute query statement
   $sql = "SELECT * FROM article";
   $stmt = $pdo->query($sql);
   $article_list = $stmt->fetchAll();
@@ -31,7 +31,7 @@ function get_articles(){
       echo "id: " . $row["id"]. " - Title: " . $row["title"]. " - Content: " . $row["content"]. "<br>";
   }*/
 
-  // 关闭连接
+  // 关闭连接  Close the connection
   $pdo = null;
 
   return $article_list;
