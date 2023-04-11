@@ -8,6 +8,7 @@
       <li><a href="/app/views/php_basic.php">PHP基础语法</a></li>
       <li><a href="/app/views/php_oop.php">PHP类和对象</a></li>
       <li><a href="/app/views/mysql_basic.php">MySQL</a></li>
+      <li><a href="/app/views/jquery_basic.php">jQuery</a></li>
     </ul>
   </nav>
 </header>
