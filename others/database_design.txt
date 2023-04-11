@@ -1,0 +1,46 @@
+【 article 】
+id	INT(11)	文章 ID，主键，自增
+title	VARCHAR(255)	文章标题
+content	TEXT	文章内容
+author	VARCHAR(255)	文章作者
+created_at	TIMESTAMP	文章发布时间，自动填充当前时间
+
+【 tag 】
+id	INT(11)	标签 ID，主键，自增
+name	VARCHAR(255)	标签名称
+
+
+【 article_tag 】
+id	INT(11)	主键，自增
+article_id	INT(11)	文章 ID，外键，关联文章表
+tag_id	INT(11)	标签 ID，外键，关联标签表
+
+
+
+
+遇到过的errors：
+【】workbench建database的时候，全选了默认但出现了err：
+ERROR 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DEFAULT' at line 1
+SQL Statement:
+CREATE SCHEMA `php_intro_site_db` DEFAULT CHARACTER SET DEFAULT;
+原因：DEFAULT 关键字只能用于指定列的默认值，不能用于指定字符集。
+解决：CREATE SCHEMA `php_intro_site_db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+【】 Workbench 一运行命令就闪退：
+重新下载个低版本Workbench就好了。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

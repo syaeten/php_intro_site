@@ -12,9 +12,9 @@ foreach ($articles as $article):
 ?>
 
 <div>
-  <h2>PHP基础语法</h2>
-  <h2><?=$article['title']?></h2>
-  <h2><?=$article['content']?></h2>
+  <h2>jQuery基础语法</h2>
+  <h2><?=$article->title?></h2>
+  <p><?=$article->content?></p>
 </div>
 
 <?php
