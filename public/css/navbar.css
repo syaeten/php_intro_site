@@ -19,7 +19,7 @@ nav li {
 }
 
 nav a {
-  color: #333;
+  color: #141414;
   text-decoration: none;
   padding: 10px 6px;
   border-radius: 5px;
@@ -37,6 +37,12 @@ nav a:hover {
   margin: 3px 0 0 5px;
 }
 
-
-
+nav #add_new_btn{
+background-color: #fff;
+color: #3a3a3a;
+}
+nav #add_new_btn:hover{
+  color: #0e0e0e;
+}
+  
 
