@@ -1,9 +1,10 @@
 <?php
 require_once '../models/Article.php';
-
+require_once '../../config/config.php';
 
 function get_articles(){
-  $host = 'localhost';
+  global $pdo;//
+  /*$host = 'localhost';
   $dbname = 'php_intro_site_db';
   $user = 'root';
   $password = '1234';
@@ -19,7 +20,7 @@ function get_articles(){
       $pdo = new PDO($dsn, $user, $password, $options);
   } catch (PDOException $e) {
       throw new PDOException($e->getMessage(), (int)$e->getCode());
-  }
+  }*/
 
   // 执行查询语句  Execute query statement
   $sql = "SELECT * FROM article";

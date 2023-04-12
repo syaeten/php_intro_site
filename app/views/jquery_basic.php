@@ -1,7 +1,6 @@
 <?php
   require_once '../../public/partials/header.php';
   require_once '../../public/partials/nav.php';
-  require_once '../controllers/ArticalController.php';
 ?>
 <?php
 $articles=get_articles();
@@ -13,8 +12,8 @@ foreach ($articles as $article):
 
 <div>
   <h2>jQuery 基础语法 (Basic syntax of jQuery)</h2>
-  <h2><?=$article->title?></h2>
-  <p><?=$article->content?></p>
+  <h2><?=$article['title']?></h2>
+  <p><?=$article['content']?></p>
 </div>
 
 <?php

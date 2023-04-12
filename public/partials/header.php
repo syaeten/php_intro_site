@@ -7,3 +7,6 @@
 </head>
 
 <body>
+  <?php
+  require_once '../controllers/get-data-controller.php';
+?>
