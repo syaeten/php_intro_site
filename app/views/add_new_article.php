@@ -4,9 +4,10 @@
 ?>
 <div>
   <h2>添加新文章 (Add New Article)</h2>
-  <form action="submit.php" method="post">
+  <form action="" method="post">
     <label for="title">Title:</label>
     <input type="text" id="title" name="title"><br><br>
+    <input type="tag" id="tag" name="tag"><br><br>
     <label for="content">Content:</label>
     <textarea id="content" name="content"></textarea><br><br>
     <input type="submit" value="Submit">
