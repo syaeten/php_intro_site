@@ -22,6 +22,7 @@ switch { case xxx: break; default: }
 
 【【常用】】
 输出: echo / print
+简写输出: <?= 'xxx' ?>
 定义常量: define("X","xxx") (使用常量名的时候不用再加$)
 
 $atricals.push(new Article(
